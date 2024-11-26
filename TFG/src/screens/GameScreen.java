@@ -137,7 +137,6 @@ public class GameScreen extends BScreen {
 
 	public GameScreen(Demo game) {
 		super(game);
-		Parametros.nivel = 3;
 		Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
 		mainStage = new Stage();
 
@@ -1244,11 +1243,17 @@ public class GameScreen extends BScreen {
 			    }
 
 			    if (Gdx.input.isKeyJustPressed(Input.Keys.E) && player.overlaps(conductor.pies)) {
-			        // Comprobamos si ya está en una animación activa
-			        if (!((Conductor) conductor).isAnimating) {
-			            ((Conductor) conductor).startAnimation();
+			        Conductor conductorObj = (Conductor) conductor;
+
+			        // Verificar si ya no está animando y si no ha dado puntos aún
+			        if (!conductorObj.isAnimating) {
+			            conductorObj.startAnimation();
 			            AudioManager.playSound("audio/sounds/puntuacion.mp3");
-			            Parametros.puntuacion += 100;
+			            
+			            if (!conductorObj.hasGivenPoints) {
+			                conductorObj.hasGivenPoints = true; // Marcar que ya dio puntos
+			                Parametros.puntuacion += 100;
+			            }
 			        }
 			    }
 
@@ -1267,12 +1272,15 @@ public class GameScreen extends BScreen {
 			    if (Gdx.input.isKeyJustPressed(Input.Keys.E) && player.overlaps(conductor.pies)) {
 			        Sensei sensei = (Sensei) conductor;
 
-			        // Comprobamos si ya está en una animación activa y si no se le ha dado puntuación
-			        if (!sensei.isAnimating && !sensei.hasGivenPoints) {
+			        // Verificar si ya no está animando y si no ha dado puntos aún
+			        if (!sensei.isAnimating) {
 			            sensei.startAnimation();
-			            sensei.hasGivenPoints = true; // Marcar que ya se le dio puntos
 			            AudioManager.playSound("audio/sounds/puntuacion.mp3");
-			            Parametros.puntuacion += 100;
+
+			            if (!sensei.hasGivenPoints) {
+			                sensei.hasGivenPoints = true; // Marcar que ya dio puntos
+			                Parametros.puntuacion += 100;
+			            }
 			        }
 			    }
 
@@ -1283,8 +1291,10 @@ public class GameScreen extends BScreen {
 			    }
 			}
 
+			}
 
-		}
+
+	
 
 		player.colocarPies();
 	}

@@ -25,6 +25,7 @@ public class Conductor extends Npc {
 	private float frameDuration = 0.4f;
 	private OrthographicCamera camara;
 	private boolean soundPlayed;
+	public boolean hasGivenPoints = false;
 
 	public Conductor(float x, float y, Stage s, GameScreen nivel) {
 		super(x, y, s, nivel);
