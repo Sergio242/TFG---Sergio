@@ -44,7 +44,6 @@ public class Electricista extends Friend {
 		espalda = loadFullAnimation("player/backMainCharacter5.png", 1, 4, 0.2f, true);
 		drcha = loadFullAnimation("player/rightMainCharacter5.png", 1, 4, 0.2f, true);
 		izqda = loadFullAnimation("player/leftMainCharacter5.png", 1, 4, 0.2f, true);
-
 		frenteIdle = loadFullAnimation("player/frontMainCharacterIdle5.png", 1, 4, 0.2f, true);
 		espaldaIdle = loadFullAnimation("player/backMainCharacterIdle5.png", 1, 4, 0.2f, true);
 		drchaIdle = loadFullAnimation("player/rightMainCharacterIdle5.png", 1, 4, 0.2f, true);

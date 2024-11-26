@@ -132,12 +132,12 @@ public class GameScreen extends BScreen {
 	public boolean activarPoste;
 	public boolean activarPosteDos;
 	private Label etiquetaPuntuacion;
-
 	public boolean pasarAlsiguienteMapaUno = false;
 	public boolean pasarAlsiguienteMapaDos = false;
 
 	public GameScreen(Demo game) {
 		super(game);
+		Parametros.nivel = 3;
 		Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
 		mainStage = new Stage();
 
@@ -1239,43 +1239,50 @@ public class GameScreen extends BScreen {
 		for (Npc conductor : npcs) {
 
 			if (conductor instanceof Conductor) {
-				if (player.overlaps(conductor)) {
-					player.preventOverlap(conductor);
-				}
+			    if (player.overlaps(conductor)) {
+			        player.preventOverlap(conductor);
+			    }
 
-				if (Gdx.input.isKeyJustPressed(Input.Keys.E) && player.overlaps(conductor.pies)) {
-					// Comprobamos si ya está en una animación activa
-					if (!((Conductor) conductor).isAnimating) {
-						((Conductor) conductor).startAnimation();
-						AudioManager.playSound("audio/sounds/puntuacion.mp3");
-						Parametros.puntuacion = Parametros.puntuacion + 100;
-					}
-				}
+			    if (Gdx.input.isKeyJustPressed(Input.Keys.E) && player.overlaps(conductor.pies)) {
+			        // Comprobamos si ya está en una animación activa
+			        if (!((Conductor) conductor).isAnimating) {
+			            ((Conductor) conductor).startAnimation();
+			            AudioManager.playSound("audio/sounds/puntuacion.mp3");
+			            Parametros.puntuacion += 100;
+			        }
+			    }
 
-				if (conductorT.pies.overlaps(player)) {
-					conductor.setAnimation(conductorT.teclaE);
-				} else {
-					conductor.setAnimation(conductorT.sinTeclaE);
-				}
+			    if (conductorT.pies.overlaps(player)) {
+			        conductor.setAnimation(conductorT.teclaE);
+			    } else {
+			        conductor.setAnimation(conductorT.sinTeclaE);
+			    }
 			}
 
 			if (conductor instanceof Sensei) {
-				if (player.overlaps(conductor)) {
-					player.preventOverlap(conductor);
-				}
+			    if (player.overlaps(conductor)) {
+			        player.preventOverlap(conductor);
+			    }
 
-				if (Gdx.input.isKeyJustPressed(Input.Keys.E) && player.overlaps(conductor.pies)) {
-					((Sensei) conductor).startAnimation();
-					AudioManager.playSound("audio/sounds/puntuacion.mp3");
-					Parametros.puntuacion = Parametros.puntuacion + 100;
-				}
+			    if (Gdx.input.isKeyJustPressed(Input.Keys.E) && player.overlaps(conductor.pies)) {
+			        Sensei sensei = (Sensei) conductor;
 
-				if (senseiT.pies.overlaps(player)) {
-					conductor.setAnimation(senseiT.teclaE);
-				} else {
-					conductor.setAnimation(senseiT.sinTeclaE);
-				}
+			        // Comprobamos si ya está en una animación activa y si no se le ha dado puntuación
+			        if (!sensei.isAnimating && !sensei.hasGivenPoints) {
+			            sensei.startAnimation();
+			            sensei.hasGivenPoints = true; // Marcar que ya se le dio puntos
+			            AudioManager.playSound("audio/sounds/puntuacion.mp3");
+			            Parametros.puntuacion += 100;
+			        }
+			    }
+
+			    if (senseiT.pies.overlaps(player)) {
+			        conductor.setAnimation(senseiT.teclaE);
+			    } else {
+			        conductor.setAnimation(senseiT.sinTeclaE);
+			    }
 			}
+
 
 		}
 

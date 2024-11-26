@@ -19,7 +19,7 @@ public class Sensei extends Npc {
 	public Animation<TextureRegion> teclaE;
 	public Animation<TextureRegion> sinTeclaE;
 	public Player player;
-
+	public boolean hasGivenPoints = false;
 	// Variables para la nueva animación
 	public Array<Texture> animationFrames;
 	private float stateTime;
