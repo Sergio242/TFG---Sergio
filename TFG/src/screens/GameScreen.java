@@ -1206,6 +1206,7 @@ public class GameScreen extends BScreen {
 								Parametros.vidaActual = 170;
 								barraVida.textureIndex = barraVida.barrasVacias.length - 1;
 								Parametros.puntuacion = 0;
+								Parametros.nivel = 0;
 								AudioManager.stopMusic();
 								AudioManager.stopSpecificSound("");
 							}
