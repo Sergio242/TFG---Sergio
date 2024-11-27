@@ -9,7 +9,7 @@ public class Parametros {
  private static int anchoPantalla=800;
  private static int altoPantalla=600;
  
- public static boolean debug=true;
+ public static boolean debug=false;
  public static boolean balaPlayer;
 
  
