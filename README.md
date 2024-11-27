@@ -1,4 +1,4 @@
-# 🎮 **Enoden: A Train Exploration Adventure** 🚂
+# 🎮 **Enoden: Una Aventura de Exploración en Tren** 🚂
 
 ¡Bienvenido al repositorio oficial del videojuego **Enoden**! Este proyecto forma parte de mi **Trabajo de Fin de Grado (TFG)** y está diseñado para ofrecer una experiencia inmersiva en un mundo inspirado en las estaciones de tren de Japón. 🌏✨
 
@@ -23,7 +23,7 @@ El juego combina elementos de exploración y narrativa, sin necesidad de habilid
 - 🚂 **Misiones únicas:** 
   - Recolectar basura y sumar puntos. 🗑️
   - Eliminar ratas en el tercer nivel para completar la misión final. ⚔️
-- 🌟 **Plataforma:** Disponible exclusivamente para PC.
+- 🌟 **Plataforma:** Exclusivo para Windows.
 
 ---
 
@@ -36,8 +36,8 @@ El juego combina elementos de exploración y narrativa, sin necesidad de habilid
 ## 🚀 **Cómo jugar**
 
 ### **Requisitos del sistema**
-- **Sistema Operativo:** Windows, macOS o Linux (compatible con Java).
-- **Java:** Versión 8 o superior.
+- **Sistema Operativo:** Windows.
+- **Java:** Versión 17 o superior.
 - **RAM:** Al menos 2 GB.
 
 ### **Instalación**
