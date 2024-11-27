@@ -20,14 +20,13 @@ public class Sensei extends Npc {
 	public Animation<TextureRegion> sinTeclaE;
 	public Player player;
 	public boolean hasGivenPoints = false;
-	// Variables para la nueva animación
 	public Array<Texture> animationFrames;
 	private float stateTime;
 	public boolean isAnimating;
-	private float frameDuration = 0.4f; // Duración de cada frame (ajustable)
-	private OrthographicCamera camara; // Añadir referencia a la cámara
+	private float frameDuration = 0.4f; 
+	private OrthographicCamera camara;
 
-	// Nuevo booleano para controlar si el sonido ya fue reproducido
+
 	private boolean soundPlayed;
 
 	public Sensei(float x, float y, Stage s, GameScreen nivel) {
@@ -122,7 +121,6 @@ public class Sensei extends Npc {
 		super.draw(batch, parentAlpha);
 	}
 
-	// Método para liberar texturas cuando no se necesiten
 	public void dispose() {
 		for (Texture texture : animationFrames) {
 			texture.dispose();
