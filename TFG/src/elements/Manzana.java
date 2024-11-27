@@ -17,7 +17,7 @@ public class Manzana extends Friend {
 		super(x, y, s, nivel);
 		setaGirando = loadFullAnimation("player/manzanaM.png", 1, 1, 0.15f, false);
 
-		this.setPolygon(19, 17, 13, -1, 1);
+		this.setPolygon(19, 18, 13, -1, 1);
 		this.vida = 10;
 	}
 
