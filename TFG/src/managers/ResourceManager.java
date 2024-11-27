@@ -41,7 +41,6 @@ public final class ResourceManager {
 		assets.load("maps/train-map-05.tmx", TiledMap.class);
 
 		// elementos de mapa
-		// assets.load("maps/Images/arbol.png", Texture.class);
 		assets.load("maps/images/rectangulo.jpg", Texture.class);
 		assets.load("maps/images/lluvia.png", Texture.class);
 		// enemigos
@@ -179,7 +178,6 @@ public final class ResourceManager {
 		assets.load("ui/rojo.jpg", Texture.class);
 		assets.load("ui/morado.jpg", Texture.class);
 
-		// a�adir m�s elementos
 
 	}
 
