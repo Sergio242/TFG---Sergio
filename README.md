@@ -30,6 +30,8 @@ El juego combina elementos de exploración y narrativa, sin necesidad de habilid
 ## 📷 **Capturas de pantalla**
 
 > *¡Pronto subiré imágenes destacadas del juego!* 📸
+> ### Explorando el mapa
+![Gameplay](EnodenGit01.png)
 
 ---
 
