@@ -137,7 +137,7 @@ public class GameScreen extends BScreen {
 
 	public GameScreen(Demo game) {
 		super(game);
-		Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
+		//Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
 		mainStage = new Stage();
 
 		switch (Parametros.nivel) {
