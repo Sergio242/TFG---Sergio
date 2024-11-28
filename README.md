@@ -43,7 +43,7 @@ El juego combina elementos de exploración y narrativa, sin necesidad de habilid
 - **RAM:** Al menos 2 GB.
 
 ### **Instalación**
-1. Descarga el archivo **Enoden.jar** desde la sección [Releases](https://github.com/tu-usuario/tu-repositorio/releases).
+1. Descarga el archivo **Enoden.jar** desde la sección [Ejecutable en Drive](https://github.com/Sergio242/TFG---Sergio/blob/main/Ejecutable%20en%20Drive).
 2. Asegúrate de tener Java instalado en tu ordenador. [Descargar Java](https://www.java.com/es/download/)
 3. Ejecuta el archivo JAR:
    ```bash
